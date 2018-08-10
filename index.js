@@ -26,5 +26,9 @@ module.exports = async function updateDotenv (env) {
 
   const contents = Object.keys(env).map(key => format(key, env[key])).join('\n')
   await promisify(fs.writeFile)(filename, contents)
+
+  // Update current env with new values
+  Object.assign(process.env, env)
+
   return env
 }
