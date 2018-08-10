@@ -4,7 +4,7 @@
   "description": "Write updates to a .env file",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest && standard"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,15 @@
   "homepage": "https://github.com/bkeepers/update-dotenv#readme",
   "devDependencies": {
     "dotenv": "^6.0.0",
-    "jest": "^23.5.0"
+    "jest": "^23.5.0",
+    "standard": "^11.0.1"
   },
   "peerDependencies": {
     "dotenv": "*"
+  },
+  "standard": {
+    "env": [
+       "jest"
+     ]
   }
 }
